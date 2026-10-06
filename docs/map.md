@@ -1,6 +1,8 @@
 # Wayfinder-Karte: pipedesigna
 
-Stand: 2026-10-05, nach Grill-Runde 1. Dieser Schnappschuss liegt im Repo; die Karte wandert als Issue-Baum in den GitHub-Tracker, sobald `/setup-matt-pocock-skills` in einer Session mit den Projekt-Skills gelaufen ist. Der Skill `wayfinder` war in der Session nicht installiert; dies ist die manuelle Anwendung der Methode (SKILL.md aus mattpocock/skills). Details zu geschlossenen Tickets stehen in `decisions/` bzw. direkt hier, solange es keinen Tracker gibt.
+Stand: 2026-10-05, nach Grill-Runde 1.
+
+**Überführt am 2026-10-06:** Die Karte liegt jetzt als Issue-Baum im Tracker: [Wayfinder-Karte: pipedesigna](https://github.com/Storypapst/pipedesigna/issues/7). Ab jetzt gilt das Issue; dieser Text bleibt als Schnappschuss und wird nicht mehr gepflegt. Er entstand als manuelle Anwendung der Methode (SKILL.md aus mattpocock/skills), weil der Skill `wayfinder` in der Session nicht installiert war.
 
 ## Destination
 

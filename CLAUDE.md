@@ -6,6 +6,8 @@
 
 Issues and the wayfinder map live in the GitHub Issues of `Storypapst/pipedesigna`. See `docs/agents/issue-tracker.md`.
 
+The map is [Wayfinder-Karte: pipedesigna](https://github.com/Storypapst/pipedesigna/issues/7). Origin: `docs/pitch.md`; research: `docs/research/`.
+
 ### Triage labels
 
 Default vocabulary: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. See `docs/agents/triage-labels.md`.
