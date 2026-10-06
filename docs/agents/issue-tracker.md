@@ -9,12 +9,14 @@ Cloud containers for this repo have no valid `gh` login (`GH_TOKEN` is rejected)
 | Operation | Tool |
 | --- | --- |
 | Create an issue (labels, assignees) | `mcp__github__issue_write`, `method: create` |
-| Create a child ticket under the wayfinder map | `mcp__github__issue_write`, `method: create`, `parent_issue_number: <map>` |
-| Attach an existing issue as sub-issue | `mcp__github__sub_issue_write` (needs the child's database `id`, returned when it is created) |
+| Create a child ticket under the wayfinder map | `mcp__github__issue_write`, `method: create`, `parent_issue_number: <map>` (the labels must already exist, see **Labels**) |
+| Attach an existing issue as sub-issue | `mcp__github__sub_issue_write` (needs the child's database `id`, returned when it is created). The reply is the whole parent issue and long; confirm the link with `issue_read` `get_parent` on the child instead. |
 | Read an issue, its comments, its children | `mcp__github__issue_read`: `get`, `get_comments`, `get_sub_issues` |
 | List issues | `mcp__github__list_issues` (filter by `labels`, `state`) |
 | Comment | `mcp__github__add_issue_comment` |
 | Labels, claim (assignee), close | `mcp__github__issue_write`, `method: update` |
+
+**Labels:** `issue_write` with `parent_issue_number` fails with `failed to resolve label "<name>"` when the label does not exist yet. Without `parent_issue_number`, the label is created automatically (grey, no description). The labels `wayfinder:map`, `wayfinder:grilling`, `wayfinder:research` and `wayfinder:prototype` exist; `wayfinder:task` does not. For the first `wayfinder:task` ticket, create it without `parent_issue_number` and attach it with `sub_issue_write`.
 
 **Blocking:** no MCP tool sets GitHub's native issue dependencies. In cloud sessions, put `Blocked by: #<n>, #<n>` as the first line of the child body (the fallback in "Wayfinding operations"). The line can be dropped if someone later adds native edges with a working `gh`.
 
